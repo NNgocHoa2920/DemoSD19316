@@ -1,0 +1,27 @@
+﻿@* @model string; *@
+@model Category
+
+<h2>nHẬP VÀ SUBMIT ĐÊ</h2>
+@* NHÚNG CODE C# THÌ BẮT ĐẦU BẰNG @ *@
+@{
+    if (Model != null)
+    {
+        <h3 class="p-3 mb-2 bg-success text-white">chào :
+        @Model.Ma, @Model.Name, @Model.Description</h3>
+    }
+}
+
+<form method="post">
+    <div class="form-group">
+        <label>Id:</label>
+        <input class="form-control" name="id" />
+    </div>
+    <div class="form-group">
+        <label>Name:</label>
+        <input class="form-control" name="name" />
+    </div>
+    <div class="m-1">
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+</form>
+
